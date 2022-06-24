@@ -1,9 +1,21 @@
-import { getMinerals, getFacilities, getFacilityMaterials, setMineral } from "./database.js"
+import { getMinerals, getFacilities, getFacilityMaterials, setMineral, purchaseMineral } from "./database.js"
 
 const minerals = getMinerals()
 const facilities = getFacilities()
 const facilityMaterials = getFacilityMaterials()
 
+// Event Listener that check for click event on purchase button and 
+// calls the purchaseMineral function
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.id.startsWith("purchaseButton")) {
+             purchaseMineral()
+        }
+    }
+)
 
 //display base html 
 //event listener once item chosen =true then display secondary html with amount, material, and facility specifics 
@@ -27,8 +39,6 @@ document.addEventListener(
         if (event.target.name === "mineral") {
 
             mineralChosen = true
-
-            setMineral(parseInt(event.target.value))
 
             mineralFacilityId = parseInt(event.target.value)
             
@@ -55,6 +65,8 @@ const spaceCart = (mineralFacilityId) => {
 
     }) 
     
+    setMineral(mineralId)
+
     minerals
     .filter( mineral => mineral.id === mineralId)
     .map(mineral => {

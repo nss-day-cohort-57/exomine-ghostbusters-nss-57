@@ -124,8 +124,7 @@ export const purchaseMineral = () => {
     colonyQuantityUpdate()
     // Set Space Cart to Empty
     database.spaceCart = {}
-    // Broadcast custom event to entire documement so that the
-    // application can re-render and update state
+    // Dispatch Custom state change event
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
 

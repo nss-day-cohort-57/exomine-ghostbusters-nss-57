@@ -4,7 +4,6 @@ const governors = getGovernors()
 const facilities = getFacilities()
 const colonies = getColonies()
 const minerals = getMinerals()
-const colonyMaterials = getColonyMaterials()
 
 // Declares a changeable governorChosen variable to
 // determine which HTML should be rendered
@@ -72,6 +71,7 @@ export const facilitiesHTML = () => {
 
 const filterMaterialsByColony = (id) => {
     let filteredArray = []
+    const colonyMaterials = getColonyMaterials()
     for (const colonyMaterial of colonyMaterials) {
         if (colonyMaterial.colonyId === id){
             filteredArray.push(colonyMaterial)
