@@ -7,3 +7,8 @@ const renderAllHTML = () => {
 }
 
 renderAllHTML()
+
+document.addEventListener("choiceMade", event => {
+    console.log("Choice has been made. Regenerating HTML...")
+    renderAllHTML()
+})

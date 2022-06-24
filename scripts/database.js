@@ -83,6 +83,10 @@ export const getFacilityMaterials = () => {
     return database.facilityMaterials.map(facilityMaterial => ({ ...facilityMaterial }))
 }
 
+export const setColony = (id) => {
+    database.spaceCart.colonyId = id
+}
+
 export const setFacility = (id) => {
     database.spaceCart.facilityId = id
 }

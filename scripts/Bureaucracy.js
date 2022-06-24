@@ -1,4 +1,4 @@
-import {governorHTML} from "./Governors.js"
+import { governorHTML } from "./Governors.js";
 import { facilitiesHTML, colonyMaterialsHTML } from "./Facilities.js";
 
 export const Bureaucracy = () => {
@@ -10,13 +10,12 @@ export const Bureaucracy = () => {
                 ${governorHTML()}
             </section>
             <section class="choices__facility options">
-                
-                
+                ${facilitiesHTML()}
             </section>
         </article>
 
         <article class="colonyMaterials">
-                
+                ${colonyMaterialsHTML()}
         </article>
     </div>
         
