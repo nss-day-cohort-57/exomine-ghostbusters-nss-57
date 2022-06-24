@@ -16,7 +16,7 @@ let governorId = null
 let colonyId = null
 
 // Event listener that checks to see if the governor change
-// event has occured and if so calls the setFacility function, changes 
+// event has occured and if so calls the setColony function, changes 
 // governorChosen to true, and dispatches a custom event 
 
 document.addEventListener("change", (event) => { 
