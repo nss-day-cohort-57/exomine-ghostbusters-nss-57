@@ -1,4 +1,4 @@
-
+import {governorHTML} from "./Governors.js"
 
 
 export const Bureaucracy = () => {
@@ -7,8 +7,7 @@ export const Bureaucracy = () => {
     <div class="topSection">
         <article class="selections">
             <section class="choices__governor options">
-                
-                
+                ${governorHTML()}
             </section>
             <section class="choices__facility options">
                 
