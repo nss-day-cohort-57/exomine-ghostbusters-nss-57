@@ -20,7 +20,7 @@ export const ordersHTML = () => {
 }
 
 document.addEventListener(
-    "click",
+    "change",
     (event) => {
         if (event.target.id === "container") {
 
@@ -32,7 +32,7 @@ document.addEventListener(
             
             spaceCart(mineralFacilityId)
 
-            document.dispatchEvent(new CustomEvent("stateChanged"))
+            document.dispatchEvent( new CustomEvent("choiceMade"))
         }
     }
 )
