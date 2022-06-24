@@ -1,5 +1,5 @@
 import {governorHTML} from "./Governors.js"
-
+import { facilitiesHTML, colonyMaterialsHTML } from "./Facilities.js";
 
 export const Bureaucracy = () => {
     return `
