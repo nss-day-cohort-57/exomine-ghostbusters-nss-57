@@ -42,6 +42,7 @@ const filterMinerals = (selectedMaterialObject) => {
 //filters all facilityMaterials to make new array containing only matching facilityMaterial with positive stock
 const materialsByFacility = (facility) => {
     let filteredFacilityMaterials = []
+    const facilityMaterials = getFacilityMaterials()
     for (const facilityMaterial of facilityMaterials) {
         if ((facilityMaterial.facilityId === facility.id) && (facilityMaterial.quantity > 0)) {
             filteredFacilityMaterials.push(facilityMaterial)

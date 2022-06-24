@@ -95,10 +95,36 @@ export const setMineral = (id) => {
     database.spaceCart.mineralId = id
 }
 
-export const purchaseMineral = () => {
+// Function that updates the facility quantity property based on what
+// mineral was purchased from where
 
-        // Broadcast custom event to entire documement so that the
-        // application can re-render and update state
-        document.dispatchEvent(new CustomEvent("stateChanged"))
+const facilityQuantityUpdate = () => {
+    for (const facilityMaterial of database.facilityMaterials) {
+        if ((facilityMaterial.facilityId === database.spaceCart.facilityId) && (facilityMaterial.mineralId === database.spaceCart.mineralId)){
+            facilityMaterial.quantity -= 1   
+        }
     }
+}
+
+//Function that updates the colonyMaterial quantity 
+// property based on what mineral was purchased for where
+
+const colonyQuantityUpdate = () => {
+    for (const colonyMaterial of database.colonyMaterials) {
+        if ((colonyMaterial.colonyId === database.spaceCart.colonyId) && (colonyMaterial.mineralId === database.spaceCart.mineralId)){
+            colonyMaterial.quantity += 1   
+        }
+    }
+}
+
+export const purchaseMineral = () => {
+    // Update Facility Quantity
+    facilityQuantityUpdate()
+    // Update Colony Quantity
+    colonyQuantityUpdate()
+    // Set Space Cart to Empty
+    database.spaceCart = {}
+    // Dispatch Custom state change event
+    document.dispatchEvent( new CustomEvent("stateChanged") )
+}
 
