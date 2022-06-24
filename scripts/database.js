@@ -83,6 +83,10 @@ export const getFacilityMaterials = () => {
     return database.facilityMaterials.map(facilityMaterial => ({...facilityMaterial}))
 }
 
+export const setColony = (id) => {
+    database.spaceCart.colonyId = id
+}
+
 export const setFacility = (id) => {
     database.spaceCart.facilityId = id
 }
@@ -94,4 +98,4 @@ export const purchaseMineral = () => {
         // application can re-render and update state
         document.dispatchEvent( new CustomEvent("stateChanged") )
     }
-}
+
