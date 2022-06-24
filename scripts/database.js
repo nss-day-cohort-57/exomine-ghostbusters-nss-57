@@ -90,8 +90,8 @@ export const setFacility = (id) => {
 
 export const purchaseMineral = () => {
 
-    // Broadcast custom event to entire documement so that the
-    // application can re-render and update state
-    document.dispatchEvent(new CustomEvent("stateChanged"))
-}
+        // Broadcast custom event to entire documement so that the
+        // application can re-render and update state
+        document.dispatchEvent(new CustomEvent("stateChanged"))
+    }
 
