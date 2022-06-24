@@ -9,6 +9,6 @@ const renderAllHTML = () => {
 renderAllHTML()
 
 document.addEventListener("choiceMade", event => {
-    console.log("Choice has been made. Regenerating HTML...")
+    console.log("State of data has changed. Regenerating HTML...")
     renderAllHTML()
 })

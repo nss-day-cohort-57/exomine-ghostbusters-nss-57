@@ -91,6 +91,10 @@ export const setFacility = (id) => {
     database.spaceCart.facilityId = id
 }
 
+export const setMineral = (id) => {
+    database.spaceCart.mineralId = id
+}
+
 // Function that updates the facility quantity property based on what
 // mineral was purchased from where
 
