@@ -1,4 +1,4 @@
-import { getGovernors, getColonies, getFacilities, getColonyMaterials, getMinerals, setColony } from "./database.js";
+import { getGovernors, getColonies, getFacilities, getColonyMaterials, getMinerals, emptySpaceCart, setColony } from "./database.js";
 
 const governors = getGovernors()
 const facilities = getFacilities()
@@ -20,7 +20,9 @@ let colonyId = null
 
 document.addEventListener("change", (event) => { 
     if (event.target.id === "governors") {
-   
+    
+    emptySpaceCart()
+
     governorChosen = true
 
     governorId = parseInt(event.target.value)
