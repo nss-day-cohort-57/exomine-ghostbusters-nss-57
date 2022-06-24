@@ -9,26 +9,28 @@ const facilityMaterials = getFacilityMaterials()
 //event listener once item chosen =true then display secondary html with amount, material, and facility specifics 
 
 let mineralChosen = false
-let cartHTML = ""
+let mineralFacilityId = null
 
+//fn displays base html unless the event listener is active and the boolean is changed 
 export const ordersHTML = () => {
         if (mineralChosen === false) {
             return `<h2>Space Cart</h2>`
         } else {
-            return `<h2>Space Cart</h2> ${cartHTML}`
+            return `<h2>Space Cart</h2> <p>${spaceCart(mineralFacilityId)}</p>`
         }
 }
-
+//event listener that parses the mineralFacilty id from the selected item and sets 
+//mineralFacilty id equal to its value. 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.id === "container") {
+        if (event.target.name === "mineral") {
 
             mineralChosen = true
 
             setMineral(parseInt(event.target.value))
 
-            let mineralFacilityId = parseInt(event.target.value)
+            mineralFacilityId = parseInt(event.target.value)
             
             spaceCart(mineralFacilityId)
 
@@ -37,7 +39,10 @@ document.addEventListener(
     }
 )
 
+//fn that finds the corresponding mineral name and facility based on the parsed id from 
+//the event listener
 const spaceCart = (mineralFacilityId) => {
+    let cartHTML = ""
   
     let mineralId = 0
     let facilityId= 0
