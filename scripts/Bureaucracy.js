@@ -1,5 +1,8 @@
 import { governorHTML } from "./Governors.js";
 import { facilitiesHTML, colonyMaterialsHTML } from "./Facilities.js";
+import { ordersHTML } from "./Orders.js"
+
+
 import { facilityMaterialsHTML } from "./Minerals.js"
 
 export const Bureaucracy = () => {
@@ -26,7 +29,7 @@ export const Bureaucracy = () => {
         </section>
 
         <section class="spaceCart">
-                
+            ${ordersHTML()}
 
             <button id="purchaseButton">Purchase Order</button>
         </section>

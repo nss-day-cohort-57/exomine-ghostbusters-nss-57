@@ -91,6 +91,9 @@ export const setFacility = (id) => {
     database.spaceCart.facilityId = id
 }
 
+export const setMineral = (id) => {
+    database.spaceCart.mineralId = id
+}
 
 export const purchaseMineral = () => {
 
