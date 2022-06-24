@@ -1,3 +1,4 @@
+import { ordersHTML } from "./Orders.js"
 
 
 
@@ -28,7 +29,7 @@ export const Bureaucracy = () => {
         </section>
 
         <section class="spaceCart">
-                
+            ${ordersHTML()}
 
             <button id="purchaseButton">Purchase Order</button>
         </section>
