@@ -59,15 +59,15 @@ export const facilityMaterialsHTML = () => {
     if (chosenFacility === null) {
         facilityMaterialsString = `<h2 class="facilityMaterialHeader">Facility Materials</h2>`
     } else {
-        facilityMaterialsString = `<h2 class="facilityMaterialHeader">Facility Materials for ${filterFacilities(facilityId)}</h2>`
+        facilityMaterialsString = `<h2 class="facilityMaterialHeader">Facility Materials for ${filterFacilities(facilityId)}</h2><ul>`
         const selectedMaterials = materialsByFacility(chosenFacility)
         for (const selectedMaterial of selectedMaterials) {
             facilityMaterialsString += `
-            <li>
+                <li>
                 <input type="radio" name="mineral" value="${selectedMaterial.id}" /> ${selectedMaterial.quantity} tons of ${filterMinerals(selectedMaterial)}
-            </li>`
+         </li>   `
         }
-        facilityMaterialsString += "</ul>"
+        facilityMaterialsString += `</ul>`
     }
     return facilityMaterialsString
 }

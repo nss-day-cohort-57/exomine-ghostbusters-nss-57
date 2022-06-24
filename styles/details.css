@@ -1,0 +1,53 @@
+.topSection {
+    display: flex;
+    justify-content: space-between
+}
+
+.lowerSection {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.facilityMaterials {
+    border: black 1px dotted;
+    width: 65%;
+    margin: 5px; 
+    padding: 5px;
+
+}
+
+.colonyMaterials {
+    text-align: center;
+    border: black 1px dotted;
+    width: 65%;
+    margin: 5px; 
+    padding: 5px;
+}
+
+.spaceCart {
+    border: black 1px dotted;
+    width: 35%;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+}
+
+body {
+    background-color: #e0aa70 ;
+    
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}

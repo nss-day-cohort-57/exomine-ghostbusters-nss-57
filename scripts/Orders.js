@@ -50,7 +50,7 @@ document.addEventListener(
 )
 
 //fn that finds the corresponding mineral name and facility based on the parsed id from 
-//the event listener
+//the event listenerserve
 const spaceCart = (mineralFacilityId) => {
     let cartHTML = ""
   

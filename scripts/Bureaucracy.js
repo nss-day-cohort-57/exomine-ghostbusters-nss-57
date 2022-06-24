@@ -23,7 +23,7 @@ export const Bureaucracy = () => {
         </article>
     </div>
         
-    <div class="lowerSection"
+    <div class="lowerSection">
         <section class="facilityMaterials">
              ${facilityMaterialsHTML()}
         </section>
