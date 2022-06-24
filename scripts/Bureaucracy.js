@@ -3,6 +3,7 @@ import { facilitiesHTML, colonyMaterialsHTML } from "./Facilities.js";
 import { ordersHTML } from "./Orders.js"
 
 
+import { facilityMaterialsHTML } from "./Minerals.js"
 
 export const Bureaucracy = () => {
     return `
@@ -24,8 +25,7 @@ export const Bureaucracy = () => {
         
     <div class="lowerSection"
         <section class="facilityMaterials">
-                
-             
+             ${facilityMaterialsHTML()}
         </section>
 
         <section class="spaceCart">
