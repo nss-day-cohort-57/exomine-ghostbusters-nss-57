@@ -117,13 +117,15 @@ const colonyQuantityUpdate = () => {
     }
 }
 
+export const emptySpaceCart = () => {
+    database.spaceCart = {}
+}
+
 export const purchaseMineral = () => {
     // Update Facility Quantity
     facilityQuantityUpdate()
     // Update Colony Quantity
     colonyQuantityUpdate()
-    // Set Space Cart to Empty
-    database.spaceCart = {}
     // Dispatch Custom state change event
     document.dispatchEvent( new CustomEvent("stateChanged") )
 }
